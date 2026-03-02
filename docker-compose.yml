@@ -1,0 +1,20 @@
+# docker-compose.yml
+
+services:
+  backend:
+    build: ./backend
+    container_name: worker-productivity-dashboard-backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend:/app
+    environment:
+      - PYTHONUNBUFFERED=1
+
+  frontend:
+    build: ./frontend
+    container_name: worker-productivity-dashboard-frontend
+    ports:
+      - "5500:80"
+    volumes:
+      - ./frontend:/usr/share/nginx/html

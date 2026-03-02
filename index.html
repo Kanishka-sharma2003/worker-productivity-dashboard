@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Factory Dashboard</title>
+    <style>
+        /* ===== Body and Headings ===== */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f4f7f9;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #1a73e8;
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            color: #555;
+            margin-top: 40px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        /* ===== Card Wrapper for Tables ===== */
+        .card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 900px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        /* ===== Table Head ===== */
+        th {
+            background-color: #1a73e8;
+            color: #fff;
+            font-weight: 600;
+            padding: 12px;
+            text-align: center;
+        }
+
+        /* ===== Table Cells ===== */
+        td {
+            padding: 12px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+
+        /* ===== Row Striping ===== */
+        tr:nth-child(even) td {
+            background-color: #f9f9f9;
+        }
+
+        /* ===== Hover Effect ===== */
+        tr:hover td {
+            background-color: #e8f0fe;
+            transition: background-color 0.3s;
+        }
+
+        /* ===== Responsive ===== */
+        @media (max-width: 768px) {
+            table {
+                width: 95%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Factory Dashboard</h1>
+
+    <!-- Workers Table -->
+    <div class="card">
+        <h2>Workers</h2>
+        <table id="workers-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Working Events</th>
+                    <th>Idle Events</th>
+                    <th>Utilization</th>
+                    <th>Total Units</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <!-- Workstations Table -->
+    <div class="card">
+        <h2>Workstations</h2>
+        <table id="stations-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Working Events</th>
+                    <th>Idle Events</th>
+                    <th>Utilization</th>
+                    <th>Total Units</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <!-- Factory Summary Table -->
+    <div class="card">
+        <h2>Factory Summary</h2>
+        <table id="factory-table">
+            <thead>
+                <tr>
+                    <th>Total Working</th>
+                    <th>Total Idle</th>
+                    <th>Utilization</th>
+                    <th>Total Units</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <!-- Script -->
+    <script src="script.js"></script>
+</body>
+</html>
