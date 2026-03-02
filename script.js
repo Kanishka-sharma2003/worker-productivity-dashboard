@@ -2,7 +2,8 @@
 window.addEventListener("DOMContentLoaded", () => {
 
     // Use local backend instead of Vercel
-    const API_BASE = "http://127.0.0.1:8000";
+    // script.js
+const API_BASE = ""; // empty = same domain
 
     async function fetchData(url) {
         try {
